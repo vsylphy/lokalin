@@ -1,0 +1,121 @@
+/* ====================================================================
+   ADMIN THEME TOKENS — LokalIn Admin Panel
+   Tambahkan import ini ke app/admin/layout.tsx atau globals.css.
+   Palet ini SENGAJA lebih kalem/profesional dibanding landing page —
+   admin panel dipakai berjam-jam, jadi prioritasnya kenyamanan mata
+   dan keterbacaan, bukan kemegahan visual.
+   ==================================================================== */
+
+[data-admin-theme="dark"] {
+  /* Surfaces */
+  --admin-bg: #0f1419;
+  --admin-bg-elevated: #161b22;
+  --admin-surface: #1a2029;
+  --admin-surface-hover: #20262f;
+  --admin-border: rgba(148, 163, 184, 0.12);
+  --admin-border-strong: rgba(148, 163, 184, 0.2);
+
+  /* Text */
+  --admin-text-primary: #e5e9f0;
+  --admin-text-secondary: #94a3b8;
+  --admin-text-tertiary: #5b6573;
+
+  /* Brand accent — muted indigo, not the vivid landing-page version */
+  --admin-accent: #6366f1;
+  --admin-accent-hover: #7c7ff5;
+  --admin-accent-soft: rgba(99, 102, 241, 0.12);
+  --admin-accent-border: rgba(99, 102, 241, 0.25);
+
+  /* Semantic colors — desaturated for calm feel */
+  --admin-success: #34d399;
+  --admin-success-soft: rgba(52, 211, 153, 0.12);
+  --admin-warning: #fbbf24;
+  --admin-warning-soft: rgba(251, 191, 36, 0.12);
+  --admin-danger: #f87171;
+  --admin-danger-soft: rgba(248, 113, 113, 0.12);
+  --admin-info: #60a5fa;
+  --admin-info-soft: rgba(96, 165, 250, 0.12);
+
+  /* Shadows */
+  --admin-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --admin-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --admin-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.4);
+
+  /* Scrollbar */
+  --admin-scrollbar-track: #161b22;
+  --admin-scrollbar-thumb: #2d3440;
+  --admin-scrollbar-thumb-hover: #3a4250;
+}
+
+[data-admin-theme="light"] {
+  /* Surfaces */
+  --admin-bg: #f7f8fa;
+  --admin-bg-elevated: #ffffff;
+  --admin-surface: #ffffff;
+  --admin-surface-hover: #f1f3f6;
+  --admin-border: rgba(15, 23, 42, 0.08);
+  --admin-border-strong: rgba(15, 23, 42, 0.14);
+
+  /* Text */
+  --admin-text-primary: #1e2530;
+  --admin-text-secondary: #5b6573;
+  --admin-text-tertiary: #94a3b8;
+
+  /* Brand accent */
+  --admin-accent: #6366f1;
+  --admin-accent-hover: #4f52e0;
+  --admin-accent-soft: rgba(99, 102, 241, 0.08);
+  --admin-accent-border: rgba(99, 102, 241, 0.18);
+
+  /* Semantic colors */
+  --admin-success: #10b981;
+  --admin-success-soft: rgba(16, 185, 129, 0.08);
+  --admin-warning: #f59e0b;
+  --admin-warning-soft: rgba(245, 158, 11, 0.08);
+  --admin-danger: #ef4444;
+  --admin-danger-soft: rgba(239, 68, 68, 0.08);
+  --admin-info: #3b82f6;
+  --admin-info-soft: rgba(59, 130, 246, 0.08);
+
+  /* Shadows */
+  --admin-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --admin-shadow-md: 0 4px 16px rgba(15, 23, 42, 0.07);
+  --admin-shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.1);
+
+  /* Scrollbar */
+  --admin-scrollbar-track: #f1f3f6;
+  --admin-scrollbar-thumb: #d1d7e0;
+  --admin-scrollbar-thumb-hover: #b8c0cc;
+}
+
+/* ====================================================================
+   Global admin scrollbar styling (Webkit + Firefox)
+   ==================================================================== */
+[data-admin-theme] * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--admin-scrollbar-thumb) var(--admin-scrollbar-track);
+}
+
+[data-admin-theme] *::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+[data-admin-theme] *::-webkit-scrollbar-track {
+  background: var(--admin-scrollbar-track);
+}
+[data-admin-theme] *::-webkit-scrollbar-thumb {
+  background: var(--admin-scrollbar-thumb);
+  border-radius: 8px;
+  border: 2px solid var(--admin-scrollbar-track);
+}
+[data-admin-theme] *::-webkit-scrollbar-thumb:hover {
+  background: var(--admin-scrollbar-thumb-hover);
+}
+
+/* Smooth theme transition — avoid jarring flash when toggling */
+[data-admin-theme] {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
