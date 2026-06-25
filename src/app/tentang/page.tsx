@@ -282,9 +282,7 @@ function DevCard({ dev, idx }: { dev: (typeof developers)[0]; idx: number }) {
           <div
             className="dev-photo-fallback"
             style={{ background: dev.accentSoft, color: dev.accent }}
-          >
-            {dev.initials}
-          </div>
+          ></div>
 
           {/* Bottom gradient overlay */}
           <div
