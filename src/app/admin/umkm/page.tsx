@@ -1,4 +1,5 @@
 import Link from "next/link";
+export const dynamic = "force-dynamic";
 import { supabase } from "@/lib/supabase";
 import { deleteUmkm } from "@/actions/umkm";
 import DeleteForm from "@/components/admin/DeleteForm";
