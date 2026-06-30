@@ -18,7 +18,7 @@ const developers = [
     role: "Project Leader",
     roleShort: "& Business Analyst",
     desc: "Menginisiasi dan memimpin proyek LokalIn, merancang konsep bisnis, alur platform, strategi pengembangan produk, serta memastikan solusi yang dibangun sesuai dengan kebutuhan pengguna dan tujuan proyek.",
-    image: "/team/dev2.jpg",
+    image: "/team/team kwu 1.png",
     accent: "#F59E0B",
     accentSoft: "rgba(245,158,11,0.15)",
   },
